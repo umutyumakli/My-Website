@@ -1,4 +1,4 @@
-
+/*Sidebar*/
 function openNav() {
     document.getElementById("sidebar").style.left = "0";
     if (screen.width < 960) {
@@ -15,7 +15,7 @@ function closeNav() {
 }
 
 
-/*TEXT ANIMATE*/
+/*Text Animate*/
 
 var TxtType = function (el, toRotate, period) {
     this.toRotate = toRotate;
@@ -73,23 +73,3 @@ window.onload = function () {
     css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
     document.body.appendChild(css);
 };
-
-/*GOOGLE MAPS*/
-
-// Initialize and add the map
-function initMap() {
-    // The location
-    const gazi = { lat: 41.095119, lng: 28.902189 };
-    // The map, centered 
-    const map = new google.maps.Map(document.getElementById("map"), {
-        zoom: 4,
-        center: gazi,
-    });
-    // The marker, positioned 
-    const marker = new google.maps.Marker({
-        position: gazi,
-        map: map,
-    });
-}
-
-window.initMap = initMap;
